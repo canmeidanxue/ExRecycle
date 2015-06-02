@@ -10,8 +10,8 @@ import android.widget.AdapterView;
 import kale.layoutmanager.ExStaggeredGridLayoutManager;
 
 /**
+ * 增强型RecyclerView，可以设置头底视图
  * @author Jack Tony
- * @brief 增强型RecyclerView，可以设置头底视图
  * @attention 必须在设置adapter前设置header或footer, clickListener
  * @date 2015/4/11
  */
@@ -102,7 +102,6 @@ public class ExRecyclerView extends RecyclerView {
 
     /**
      * 需要在设置头、低、监听器之后再调用setAdapter(Adapter adapter)来设置适配器
-     * @param adapter
      */
     @Override
     public void setAdapter(Adapter adapter) {
