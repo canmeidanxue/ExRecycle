@@ -246,7 +246,7 @@ public class AaaActivity extends BaseActivity implements ResponseCallback {
         /**
          * 监听滚动事件
          */
-        waterFallRcv.setOnScrollListener(new OnRecyclerViewScrollListener() {
+        waterFallRcv.addOnScrollListener(new OnRecyclerViewScrollListener() {
 
             @Override
             public void onScrollUp() {
