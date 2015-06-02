@@ -1,6 +1,5 @@
 # ExRecyclerView  
 --  
-
 在`ExRecyclerView`中可以设置头、底、item点击监听等操作  
 ![image](./demoPic/recyclerView.png)  
 
@@ -23,7 +22,7 @@
 
 
 ## 开发者
-![image](./demoPic/kale.png)  
+![](https://avatars3.githubusercontent.com/u/9552155?v=3&s=460) 
 
 Jack Tony: <developer_kale@.com>  
 
