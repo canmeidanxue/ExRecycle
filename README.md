@@ -10,7 +10,26 @@
 
 可利用`DividerGridItemDecoration`或`DividerItemDecoration`来添加分割线  
 
-本项目中demo的adapter用的是通用的adapter（CommonRcvAdapter:[https://github.com/tianzhijiexian/CommonAdapter](https://github.com/tianzhijiexian/CommonAdapter)）来做的。可以方便简单的实现多个item类型的布局。
+本项目中demo的adapter用的是通用的adapter（CommonRcvAdapter:[https://github.com/tianzhijiexian/CommonAdapter](https://github.com/tianzhijiexian/CommonAdapter)）来做的。可以方便简单的实现多个item类型的布局。  
+
+## 使用方式  
+  
+1.添加JitPack仓库
+  
+```  
+repositories {
+	maven {
+		url "https://jitpack.io"
+	}
+}
+```   
+
+2.添加依赖  
+```  
+dependencies {
+		compile 'com.github.tianzhijiexian:ExRecyclerView:1.1.0'
+}    
+```
 
 ## 截图  
 ![image](./demoPic/demo01.png)  
