@@ -2,12 +2,12 @@ package com.kale.wfalldemo;
 
 import com.kale.wfalldemo.aaa.activity.AaaActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +15,8 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         startActivity(new Intent(this, AaaActivity.class));
         finish();
+        
+        
     }
 
 

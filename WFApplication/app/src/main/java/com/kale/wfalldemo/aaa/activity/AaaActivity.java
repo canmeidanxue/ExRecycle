@@ -1,10 +1,9 @@
 package com.kale.wfalldemo.aaa.activity;
 
-
 import com.kale.wfalldemo.BaseActivity;
 import com.kale.wfalldemo.R;
 import com.kale.wfalldemo.ResponseCallback;
-import com.kale.wfalldemo.aaa.adapter.DataManager;
+import com.kale.wfalldemo.aaa.DataManager;
 import com.kale.wfalldemo.aaa.adapter.waterFallOrangeItem;
 import com.kale.wfalldemo.aaa.adapter.waterFallWhiteItem;
 import com.kale.wfalldemo.aaa.mode.Photo;
@@ -34,12 +33,12 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import kale.mylibrary.CommonRcvAdapter;
-import kale.mylibrary.DividerGridItemDecoration;
-import kale.mylibrary.ExRecyclerView;
-import kale.mylibrary.ExStaggeredGridLayoutManager;
-import kale.mylibrary.OnRecyclerViewScrollListener;
-import kale.mylibrary.RcvAdapterItem;
+import kale.adapter.recycler.RcvAdapterItem;
+import kale.decoration.DividerGridItemDecoration;
+import kale.layoutmanager.ExStaggeredGridLayoutManager;
+import kale.recycler.ExCommonRcvAdapter;
+import kale.recycler.ExRecyclerView;
+import kale.recycler.OnRecyclerViewScrollListener;
 
 
 /**
@@ -113,9 +112,9 @@ public class AaaActivity extends BaseActivity implements ResponseCallback {
     private void setTabView() {
     }
 
-    class AaaWaterFallAdapter extends CommonRcvAdapter<PhotoData> {
+    class AaaWaterFallAdapter extends ExCommonRcvAdapter<PhotoData> {
 
-        protected AaaWaterFallAdapter(List<PhotoData> data) {
+        protected AaaWaterFallAdapter(List data) {
             super(data);
         }
 
@@ -239,7 +238,7 @@ public class AaaActivity extends BaseActivity implements ResponseCallback {
 
         List<PhotoData> list = new ArrayList<>();// 先放一个空的list
         waterFallAdapter = new AaaWaterFallAdapter(list);
-        waterFallRcv.setAdapter(waterFallAdapter);
+        
         
         // 不显示滚动到顶部/底部的阴影（减少绘制）
         waterFallRcv.setOverScrollMode(View.OVER_SCROLL_NEVER);
@@ -301,6 +300,7 @@ public class AaaActivity extends BaseActivity implements ResponseCallback {
                 return true;
             }
         });
+        waterFallRcv.setAdapter(waterFallAdapter);
     }
 
     private float headerHeight;

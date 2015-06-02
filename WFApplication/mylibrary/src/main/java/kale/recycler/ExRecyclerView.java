@@ -1,4 +1,4 @@
-package kale.mylibrary;
+package kale.recycler;
 
 import android.content.Context;
 import android.support.v7.widget.GridLayoutManager;
@@ -6,6 +6,8 @@ import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.AdapterView;
+
+import kale.layoutmanager.ExStaggeredGridLayoutManager;
 
 /**
  * @author Jack Tony
@@ -15,7 +17,7 @@ import android.widget.AdapterView;
  */
 public class ExRecyclerView extends RecyclerView {
 
-    protected final String TAG = getClass().getSimpleName();
+    // protected final String TAG = getClass().getSimpleName();
 
     private View mHeaderView = null;
 
@@ -58,10 +60,10 @@ public class ExRecyclerView extends RecyclerView {
 
         @Override
         public int getSpanSize(int position) {
-            BaseRecyclerAdapter adapter = (BaseRecyclerAdapter) getAdapter();
+            ExCommonRcvAdapter adapter = (ExCommonRcvAdapter) getAdapter();
             // 如果是头或底的类型，那么就设置横跨所有列
-            if (adapter.getItemViewType(position) == BaseRecyclerAdapter.VIEW_TYPES.HEADER ||
-                    adapter.getItemViewType(position) == BaseRecyclerAdapter.VIEW_TYPES.FOOTER) {
+            if (adapter.getItemViewType(position) == ExCommonRcvAdapter.VIEW_TYPES.HEADER ||
+                    adapter.getItemViewType(position) == ExCommonRcvAdapter.VIEW_TYPES.FOOTER) {
                 return mSpanSize;
             }
             return 1;
@@ -98,14 +100,18 @@ public class ExRecyclerView extends RecyclerView {
     }
 
 
+    /**
+     * 需要在设置头、低、监听器之后再调用setAdapter(Adapter adapter)来设置适配器
+     * @param adapter
+     */
     @Override
     public void setAdapter(Adapter adapter) {
         super.setAdapter(adapter);
-        if (adapter instanceof BaseRecyclerAdapter) {
-            ((BaseRecyclerAdapter) adapter).mOnItemClickListener = mOnItemClickListener;
-            ((BaseRecyclerAdapter) adapter).mOnItemLongClickListener = mOnItemLongClickListener;
-            ((BaseRecyclerAdapter) adapter).customHeaderView = mHeaderView;
-            ((BaseRecyclerAdapter) adapter).customFooterView = mFooterView;
+        if (adapter instanceof ExCommonRcvAdapter) {
+            ((ExCommonRcvAdapter) adapter).mOnItemClickListener = mOnItemClickListener;
+            ((ExCommonRcvAdapter) adapter).mOnItemLongClickListener = mOnItemLongClickListener;
+            ((ExCommonRcvAdapter) adapter).customHeaderView = mHeaderView;
+            ((ExCommonRcvAdapter) adapter).customFooterView = mFooterView;
         }
     }
 

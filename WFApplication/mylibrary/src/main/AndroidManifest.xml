@@ -1,6 +1,8 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="kale.mylibrary">
+<manifest package="kale.recycler"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <application android:allowBackup="true" android:label="@string/app_name">
+    <application
+        android:allowBackup="true">
 
     </application>
 

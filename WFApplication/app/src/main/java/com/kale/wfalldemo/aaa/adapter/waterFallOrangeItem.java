@@ -10,7 +10,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.widget.TextView;
 
-import kale.mylibrary.RcvAdapterItem;
+import kale.adapter.recycler.RcvAdapterItem;
 
 /**
  * @author Jack Tony

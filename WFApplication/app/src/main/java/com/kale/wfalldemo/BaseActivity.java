@@ -1,14 +1,14 @@
 package com.kale.wfalldemo;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 
 /**
  * @author Jack Tony
  * @brief
  * @date 2015/4/5
  */
-public abstract class BaseActivity extends ActionBarActivity{
+public abstract class BaseActivity extends Activity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

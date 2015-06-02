@@ -1,4 +1,4 @@
-package kale.mylibrary;
+package kale.recycler;
 
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;

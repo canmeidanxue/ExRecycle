@@ -8,7 +8,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <kale.mylibrary.ExRecyclerView
+        <kale.recycler.ExRecyclerView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/waterFall_recyclerView"
                 android:layout_width="match_parent"

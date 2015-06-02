@@ -1,6 +1,6 @@
 package com.kale.wfalldemo.aaa.mode;
 
-import kale.mylibrary.AdapterModel;
+import kale.adapter.model.AdapterModel;
 
 public class PhotoData implements AdapterModel {
 

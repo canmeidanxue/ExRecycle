@@ -1,4 +1,4 @@
-package com.kale.wfalldemo.aaa.adapter;
+package com.kale.wfalldemo.aaa;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
