@@ -114,7 +114,7 @@ public class AaaActivity extends BaseActivity implements ResponseCallback {
 
     class AaaWaterFallAdapter extends ExCommonRcvAdapter<PhotoData> {
 
-        protected AaaWaterFallAdapter(List data) {
+        protected AaaWaterFallAdapter(List<PhotoData> data) {
             super(data);
         }
 
