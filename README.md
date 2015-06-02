@@ -1,5 +1,4 @@
 # ExRecyclerView  
---  
 在`ExRecyclerView`中可以设置头、底、item点击监听等操作  
 ![image](./demoPic/recyclerView.png)  
 
