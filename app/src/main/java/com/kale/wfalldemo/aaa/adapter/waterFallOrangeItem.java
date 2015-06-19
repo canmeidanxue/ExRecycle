@@ -6,18 +6,18 @@ import com.kale.wfalldemo.R;
 import com.kale.wfalldemo.aaa.mode.PhotoData;
 import com.kale.wfalldemo.extra.fresco.DynamicHeightSimpleDraweeView;
 
-import android.content.Context;
 import android.net.Uri;
 import android.widget.TextView;
 
-import kale.adapter.recycler.RcvAdapterItem;
+import kale.adapter.AdapterItem;
+import kale.adapter.ViewHolder;
 
 /**
  * @author Jack Tony
  * @brief
  * @date 2015/4/10
  */
-public class waterFallOrangeItem extends RcvAdapterItem<PhotoData> {
+public class waterFallOrangeItem implements AdapterItem<PhotoData> {
 
     /** 内容主体的图片 */
     public DynamicHeightSimpleDraweeView contentSdv;
@@ -33,15 +33,21 @@ public class waterFallOrangeItem extends RcvAdapterItem<PhotoData> {
      */
     public TextView positionTv;
 
-    public waterFallOrangeItem(Context context, int layoutResId) {
-        super(context, layoutResId);
-        contentSdv = getView(R.id.aaa_wf_item_content_DraweeView);
-        descriptionTv = getView(R.id.aaa_wf_item_description_textView);
-        headPicSdv = getView(R.id.aaa_wf_item_user_head_draweeView);
-        positionTv = getView(R.id.aaa_wf_item_positon_textView);
+
+    @Override
+    public int getLayoutResId() {
+        return R.layout.aaa_waterfall_orange_item;
     }
 
     @Override
+    public void initViews(ViewHolder viewHolder, PhotoData data, int i) {
+        contentSdv = viewHolder.get(R.id.aaa_wf_item_content_DraweeView);
+        descriptionTv = viewHolder.get(R.id.aaa_wf_item_description_textView);
+        headPicSdv = viewHolder.get(R.id.aaa_wf_item_user_head_draweeView);
+        positionTv = viewHolder.get(R.id.aaa_wf_item_positon_textView);
+        setViews(data,i);
+    }
+
     public void setViews(PhotoData data, int position) {
         contentSdv.setImageURI(Uri.parse(data.photo.path));
         

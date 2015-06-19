@@ -18,7 +18,6 @@ import kale.layoutmanager.ExStaggeredGridLayoutManager;
 public class ExRecyclerView extends RecyclerView {
 
     // protected final String TAG = getClass().getSimpleName();
-
     private View mHeaderView = null;
 
     private View mFooterView = null;

@@ -1,6 +1,7 @@
 package com.kale.wfalldemo.aaa.mode;
 
-import kale.adapter.model.AdapterModel;
+
+import kale.adapter.AdapterModel;
 
 public class PhotoData implements AdapterModel {
 
@@ -19,8 +20,7 @@ public class PhotoData implements AdapterModel {
     }
 
     @Override
-    public int getDataType() {
-        int type = 1+ (int) (Math.random() * 2);
-        return type;
+    public Object getDataType() {
+        return 1 + (int) (Math.random() * 2);
     }
 }

@@ -33,7 +33,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import kale.adapter.recycler.RcvAdapterItem;
+import kale.adapter.AdapterItem;
 import kale.decoration.DividerGridItemDecoration;
 import kale.layoutmanager.ExStaggeredGridLayoutManager;
 import kale.recycler.ExCommonRcvAdapter;
@@ -120,16 +120,15 @@ public class AaaActivity extends BaseActivity implements ResponseCallback {
 
         @NonNull
         @Override
-        protected RcvAdapterItem initItemView(Context context, int type) {
-            switch (type) {
+        protected AdapterItem<PhotoData> initItemView(Object type) {
+            switch (Integer.valueOf(type.toString())) {
                 case PhotoData.FIRST:
-                    return new waterFallOrangeItem(context, R.layout.aaa_waterfall_orange_item);
+                    return new waterFallOrangeItem();
                 case PhotoData.Second:
                 default:
-                    return new waterFallWhiteItem(context, R.layout.aaa_waterfall_white_item);
+                    return new waterFallWhiteItem();
             }
         }
-
     }
 
     /*    private Drawable toolbarBgDrawable;
@@ -341,7 +340,8 @@ public class AaaActivity extends BaseActivity implements ResponseCallback {
     private void hideViews() {
         FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) floatIV.getLayoutParams();
         int fabBottomMargin = lp.bottomMargin;
-        floatIV.animate().translationY(floatIV.getHeight() + fabBottomMargin).setInterpolator(new AccelerateInterpolator(2)).start();
+        floatIV.animate().translationY(floatIV.getHeight() + fabBottomMargin)
+                .setInterpolator(new AccelerateInterpolator(2)).start();
     }
 
     /**

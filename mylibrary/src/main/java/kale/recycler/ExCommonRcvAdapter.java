@@ -7,17 +7,18 @@ import android.widget.AdapterView;
 
 import java.util.List;
 
-import kale.adapter.model.AdapterModel;
+import kale.adapter.AdapterModel;
 import kale.adapter.recycler.CommonRcvAdapter;
+
 
 /**
  * @author Jack Tony
  * @date 2015/6/2
  */
-public abstract class ExCommonRcvAdapter<T extends AdapterModel> extends CommonRcvAdapter<T>{
+public abstract class ExCommonRcvAdapter<T extends AdapterModel> extends CommonRcvAdapter<T> {
 
     //protected final String TAG = getClass().getSimpleName();
-
+    
     protected View customHeaderView = null;
 
     protected View customFooterView = null;
@@ -38,8 +39,6 @@ public abstract class ExCommonRcvAdapter<T extends AdapterModel> extends CommonR
         public static final int HEADER = 7;
 
         public static final int FOOTER = 8;
-
-        public static final int NORMAL = 9;
     }
 
     class SimpleViewHolder extends RecyclerView.ViewHolder {
@@ -95,6 +94,7 @@ public abstract class ExCommonRcvAdapter<T extends AdapterModel> extends CommonR
      */
     @Override
     public void onBindViewHolder(final RecyclerView.ViewHolder viewHolder, int position) {
+
         if ((customHeaderView != null && position == 0) || (customFooterView != null && position == getItemCount() - 1)) {
             // 如果是header或者是footer则不处理
         } else {
