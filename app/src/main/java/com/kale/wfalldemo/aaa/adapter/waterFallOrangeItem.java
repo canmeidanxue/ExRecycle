@@ -41,10 +41,10 @@ public class waterFallOrangeItem implements AdapterItem<PhotoData> {
 
     @Override
     public void initViews(ViewHolder viewHolder, PhotoData data, int i) {
-        contentSdv = viewHolder.get(R.id.aaa_wf_item_content_DraweeView);
-        descriptionTv = viewHolder.get(R.id.aaa_wf_item_description_textView);
-        headPicSdv = viewHolder.get(R.id.aaa_wf_item_user_head_draweeView);
-        positionTv = viewHolder.get(R.id.aaa_wf_item_positon_textView);
+        contentSdv = viewHolder.getView(R.id.aaa_wf_item_content_DraweeView);
+        descriptionTv = viewHolder.getView(R.id.aaa_wf_item_description_textView);
+        headPicSdv = viewHolder.getView(R.id.aaa_wf_item_user_head_draweeView);
+        positionTv = viewHolder.getView(R.id.aaa_wf_item_positon_textView);
         setViews(data,i);
     }
 

@@ -30,10 +30,10 @@ public class waterFallWhiteItem implements AdapterItem<PhotoData> {
 
     @Override
     public void initViews(ViewHolder vh, PhotoData photoData, int position) {
-        contentSdv = vh.get(R.id.aaa_wf_item_content_DraweeView);
-        descriptionTv = vh.get(R.id.aaa_wf_item_description_textView);
-        headPicSdv = vh.get(R.id.aaa_wf_item_user_head_draweeView);
-        positionTv = vh.get(R.id.aaa_wf_item_positon_textView);
+        contentSdv = vh.getView(R.id.aaa_wf_item_content_DraweeView);
+        descriptionTv = vh.getView(R.id.aaa_wf_item_description_textView);
+        headPicSdv = vh.getView(R.id.aaa_wf_item_user_head_draweeView);
+        positionTv = vh.getView(R.id.aaa_wf_item_positon_textView);
         setViews(photoData, position);
     }
 
