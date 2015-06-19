@@ -27,7 +27,7 @@ repositories {
 2.添加依赖  
 ```  
 dependencies {
-		compile 'com.github.tianzhijiexian:ExRecyclerView:1.1.0'
+		compile 'com.github.tianzhijiexian:ExRecyclerView:1.1.1'
 }    
 ```
 
